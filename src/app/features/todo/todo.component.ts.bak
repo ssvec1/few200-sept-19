@@ -10,17 +10,20 @@ import { Observable } from 'rxjs';
 })
 export class TodoComponent implements OnInit {
 
-
-  todoList$: Observable<TodoListItem[]>;
+  toDoList$: Observable<TodoListItem[]>;
 
   constructor(private service: ListDataService) { }
 
   ngOnInit() {
-    this.todoList$ = this.service.getData();
-
+    this.toDoList$ = this.service.getData();
+    // this.service.getData().subscribe(stuff => {
+    // console.log('from service', stuff);
+    // this.toDoList = stuff;
+    // });
   }
 
   addTodoItem(what: string) {
     this.service.add(what);
   }
+
 }
