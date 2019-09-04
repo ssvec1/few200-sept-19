@@ -8,6 +8,7 @@ import { ListDataService } from './services/list-data.service';
 
 
 @NgModule({
+  // these are private to this module
   declarations: [TodoComponent, EntryComponent, ListComponent],
   imports: [
     CommonModule
@@ -15,4 +16,5 @@ import { ListDataService } from './services/list-data.service';
   exports: [TodoComponent],
   providers: [ListDataService]
 })
+// export so that app module ts can use it
 export class TodoModule { }

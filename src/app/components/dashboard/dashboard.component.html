@@ -1,5 +1,8 @@
 <div class="alert alert-info">
   <h3>Dashboard coming soon</h3>
   <p>{{message}}</p>
-
+  <p>
+    ------<span>{{ current$ | async }}</span>
+    Count By is ------<span>{{ by$ | async }}</span>
+  </p>
 </div>
